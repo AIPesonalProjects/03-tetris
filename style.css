@@ -26,6 +26,14 @@
   --restart-hover: #9bbdff;
   --switch-bg: #2a2a3a;
   --switch-knob: #e0e0e0;
+  --hs-border: #2a2a3a;
+  --hs-row-alt: rgba(255, 255, 255, 0.03);
+  --hs-highlight-bg: rgba(122, 162, 247, 0.25);
+  --hs-highlight-text: #ffd54f;
+  --input-bg: #1a1a25;
+  --input-border: #3a3a5a;
+  --input-text: #e0e0e0;
+  --reset-text: #e57373;
 }
 
 body.light-theme {
@@ -50,6 +58,14 @@ body.light-theme {
   --restart-hover: #5c7ce0;
   --switch-bg: #c8c8d8;
   --switch-knob: #ffffff;
+  --hs-border: #d8d8e2;
+  --hs-row-alt: rgba(0, 0, 0, 0.03);
+  --hs-highlight-bg: rgba(59, 91, 219, 0.15);
+  --hs-highlight-text: #b8860b;
+  --input-bg: #ffffff;
+  --input-border: #c0c0d0;
+  --input-text: #1a1a25;
+  --reset-text: #d32f2f;
 }
 
 body {
@@ -265,4 +281,121 @@ kbd {
 
 #restart-btn:hover {
   background: var(--restart-hover);
+}
+
+/* ---- High scores ---- */
+.highscore-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 220px;
+}
+
+.highscore-panel.hidden {
+  display: none;
+}
+
+.overlay-stats {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.overlay-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.overlay-stat .value {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--value-color);
+}
+
+.highscore-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.highscore-table td {
+  padding: 4px 6px;
+  border-bottom: 1px solid var(--hs-border);
+  text-align: left;
+}
+
+.highscore-table tr:nth-child(even) {
+  background: var(--hs-row-alt);
+}
+
+.highscore-table td:last-child {
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.highscore-table .highscore-empty {
+  text-align: center;
+  color: var(--controls-text);
+  font-style: italic;
+}
+
+.highscore-table tr.highscore-new {
+  background: var(--hs-highlight-bg);
+  color: var(--hs-highlight-text);
+  font-weight: 700;
+}
+
+.highscore-form {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.highscore-form.hidden {
+  display: none;
+}
+
+.name-input {
+  flex: 1;
+  min-width: 0;
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+#save-score-btn {
+  background: var(--restart-bg);
+  color: var(--restart-text);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#save-score-btn:hover {
+  background: var(--restart-hover);
+}
+
+.reset-records-btn {
+  background: none;
+  border: 1px solid var(--hs-border);
+  color: var(--reset-text);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.reset-records-btn:hover {
+  opacity: 0.8;
 }
