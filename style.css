@@ -310,3 +310,143 @@ body.skin-pastel #next-canvas {
 body.skin-pixel {
   --grid-line: #2a2a3a;
 }
+
+/* ---- Records ---- */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.records-table th {
+  text-align: left;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: var(--label-color);
+  font-weight: 600;
+  padding: 0 4px 4px;
+  border-bottom: 1px solid var(--kbd-border);
+}
+
+.records-table th:not(:first-child),
+.records-table td:not(:first-child) {
+  text-align: right;
+}
+
+.records-table td {
+  padding: 3px 4px;
+  white-space: nowrap;
+}
+
+.records-table td:first-child {
+  color: var(--label-color);
+  width: 1%;
+}
+
+.records-table tr.empty td {
+  color: var(--controls-text);
+  text-align: center;
+  padding: 8px 4px;
+}
+
+.records-table tr.highlight td {
+  color: var(--value-color);
+  font-weight: 700;
+}
+
+.records-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid color-mix(in srgb, var(--kbd-border) 50%, transparent);
+}
+
+.best-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: var(--controls-text);
+  margin-top: 4px;
+}
+
+.best-stats strong {
+  color: var(--value-color);
+}
+
+.reset-btn {
+  margin-top: 8px;
+  background: transparent;
+  color: var(--controls-text);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.reset-btn:hover {
+  background: var(--kbd-bg);
+  color: var(--text);
+}
+
+.overlay-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.overlay-records.hidden {
+  display: none;
+}
+
+.new-record-label {
+  color: var(--overlay-title-color);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#name-input {
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  color: var(--text);
+  padding: 6px 10px;
+  font-size: 13px;
+  text-align: center;
+  width: 140px;
+}
+
+#save-record-btn {
+  background: var(--restart-bg);
+  color: var(--restart-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+#save-record-btn:hover {
+  background: var(--restart-hover);
+}
+
+.overlay-top-records-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.overlay-top-records-wrap.hidden {
+  display: none;
+}
+
+.overlay-top-records-wrap .records-table {
+  min-width: 220px;
+}
