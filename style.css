@@ -450,3 +450,78 @@ body.skin-pixel {
 .overlay-top-records-wrap .records-table {
   min-width: 220px;
 }
+
+/* ---- Pause menu ---- */
+.pause-box {
+  width: 220px;
+}
+
+.pause-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--value-color);
+}
+
+.pause-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.pause-panel.hidden {
+  display: none;
+}
+
+.pause-level {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--controls-text);
+}
+
+.pause-level select {
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.menu-btn {
+  background: var(--restart-bg);
+  color: var(--restart-text);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s;
+}
+
+.menu-btn:hover {
+  background: var(--restart-hover);
+}
+
+.controls-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--controls-text);
+}
+
+.controls-list li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+}

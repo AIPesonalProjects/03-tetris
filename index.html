@@ -56,7 +56,7 @@
             <li><kbd>↑</kbd> rotar</li>
             <li><kbd>↓</kbd> bajar</li>
             <li><kbd>Space</kbd> caída</li>
-            <li><kbd>P</kbd> pausa</li>
+            <li><kbd>P</kbd> / <kbd>Esc</kbd> pausa</li>
           </ul>
         </div>
 
@@ -108,6 +108,33 @@
           </table>
         </div>
         <button id="restart-btn">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="pause-overlay" class="overlay hidden">
+      <div class="overlay-box pause-box">
+        <p class="pause-title">PAUSA</p>
+
+        <div id="pause-main" class="pause-panel">
+          <div class="pause-level">
+            <label for="start-level-select">Nivel inicial</label>
+            <select id="start-level-select"></select>
+          </div>
+          <button id="resume-btn" class="menu-btn">Reanudar</button>
+          <button id="pause-restart-btn" class="menu-btn">Reiniciar</button>
+          <button id="controls-btn" class="menu-btn">Ver controles</button>
+        </div>
+
+        <div id="pause-controls-view" class="pause-panel hidden">
+          <ul class="controls-list">
+            <li><kbd>←</kbd><kbd>→</kbd> mover</li>
+            <li><kbd>↑</kbd> / <kbd>X</kbd> rotar</li>
+            <li><kbd>↓</kbd> bajar suave</li>
+            <li><kbd>Space</kbd> caída rápida</li>
+            <li><kbd>P</kbd> / <kbd>Esc</kbd> pausa</li>
+          </ul>
+          <button id="back-btn" class="menu-btn">Volver</button>
+        </div>
       </div>
     </div>
   </div>
