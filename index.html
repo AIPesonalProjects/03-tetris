@@ -50,6 +50,27 @@
             <li><kbd>P</kbd> pausa</li>
           </ul>
         </div>
+
+        <div class="panel-section records-section">
+          <span class="label">RECORDS</span>
+          <table class="records-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Score</th>
+                <th>Líneas</th>
+                <th>Combo</th>
+              </tr>
+            </thead>
+            <tbody id="records-list"></tbody>
+          </table>
+          <div class="best-stats">
+            <span>Mejor combo: <strong id="best-combo">0</strong></span>
+            <span>Máx. líneas: <strong id="max-lines">0</strong></span>
+          </div>
+          <button id="reset-records-btn" class="reset-btn">Resetear records</button>
+        </div>
       </aside>
     </div>
 
@@ -57,6 +78,26 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+        <div id="overlay-records" class="overlay-records hidden">
+          <p class="new-record-label">¡Nuevo récord!</p>
+          <input id="name-input" maxlength="10" placeholder="Tu nombre" autocomplete="off" />
+          <button id="save-record-btn">Guardar</button>
+        </div>
+        <div id="overlay-top-records-wrap" class="overlay-top-records-wrap hidden">
+          <span class="label">RECORDS</span>
+          <table class="records-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Score</th>
+                <th>Líneas</th>
+                <th>Combo</th>
+              </tr>
+            </thead>
+            <tbody id="overlay-top-records"></tbody>
+          </table>
+        </div>
         <button id="restart-btn">Reiniciar</button>
       </div>
     </div>
