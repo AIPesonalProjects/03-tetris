@@ -135,6 +135,23 @@ body {
   font-size: 10px;
 }
 
+/* ---- Skin select ---- */
+.skin-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#skin-select {
+  background: var(--kbd-bg);
+  color: var(--text);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  font-size: 11px;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
 .game-container {
   display: flex;
   gap: 20px;
@@ -265,4 +282,31 @@ kbd {
 
 #restart-btn:hover {
   background: var(--restart-hover);
+}
+
+/* ---- Skins ---- */
+body.skin-neon {
+  --board-bg: #05050a;
+  --board-border: #0ff;
+  --grid-line: #101018;
+}
+
+body.skin-neon #board,
+body.skin-neon #next-canvas {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.35), inset 0 0 30px rgba(0, 255, 255, 0.05);
+}
+
+body.skin-pastel {
+  --board-bg: #fdf6f0;
+  --board-border: #e0d0e0;
+  --grid-line: #efe4ee;
+}
+
+body.skin-pastel #board,
+body.skin-pastel #next-canvas {
+  border-radius: 12px;
+}
+
+body.skin-pixel {
+  --grid-line: #2a2a3a;
 }
