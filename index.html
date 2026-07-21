@@ -66,6 +66,31 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+
+        <div id="highscore-panel" class="highscore-panel hidden">
+          <div class="overlay-stats">
+            <div class="overlay-stat">
+              <span class="label">MEJOR COMBO</span>
+              <span class="value" id="best-combo">0</span>
+            </div>
+            <div class="overlay-stat">
+              <span class="label">MÁX LÍNEAS</span>
+              <span class="value" id="max-lines">0</span>
+            </div>
+          </div>
+
+          <table class="highscore-table" id="highscore-table">
+            <tbody id="highscore-body"></tbody>
+          </table>
+
+          <div id="highscore-form" class="highscore-form hidden">
+            <input id="name-input" class="name-input" maxlength="12" autocomplete="off" placeholder="Tu nombre" />
+            <button id="save-score-btn">Guardar</button>
+          </div>
+
+          <button id="reset-records-btn" class="reset-records-btn">Borrar récords</button>
+        </div>
+
         <button id="restart-btn">Reiniciar</button>
       </div>
     </div>
