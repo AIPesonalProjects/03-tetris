@@ -135,6 +135,28 @@ body {
   font-size: 10px;
 }
 
+/* ---- Skin picker ---- */
+.skin-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skin-picker .label {
+  font-size: 10px;
+}
+
+.skin-picker select {
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  color: var(--kbd-text);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .game-container {
   display: flex;
   gap: 20px;
