@@ -10,6 +10,15 @@
   <div class="wrapper">
     <div class="top-bar">
       <h1 class="game-title">TETRIS</h1>
+      <div class="skin-picker">
+        <span class="label">SKIN</span>
+        <select id="skin-select">
+          <option value="retro">Retro</option>
+          <option value="neon">Neon</option>
+          <option value="pastel">Pastel</option>
+          <option value="pixel">Pixel Art</option>
+        </select>
+      </div>
       <div class="theme-toggle">
         <label class="switch">
           <input type="checkbox" id="theme-switch" />
@@ -50,6 +59,16 @@
             <li><kbd>P</kbd> pausa</li>
           </ul>
         </div>
+
+        <div class="panel-section highscores">
+          <span class="label">RECORDS</span>
+          <ol id="highscores-list" class="highscores-list"></ol>
+          <div class="best-stats">
+            <span>Mejor combo: <b id="best-combo">0</b></span>
+            <span>Máx. líneas: <b id="max-lines">0</b></span>
+          </div>
+          <button id="reset-scores-btn" class="reset-btn">Resetear récords</button>
+        </div>
       </aside>
     </div>
 
@@ -57,7 +76,40 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+        <div id="new-highscore-form" class="new-highscore-form hidden">
+          <p class="new-record-label">¡Nuevo récord!</p>
+          <input id="player-name-input" type="text" maxlength="12" placeholder="Tu nombre" autocomplete="off" />
+          <button id="save-score-btn">Guardar</button>
+        </div>
+        <ol id="overlay-highscores-list" class="highscores-list"></ol>
         <button id="restart-btn">Reiniciar</button>
+      </div>
+    </div>
+
+    <div id="pause-overlay" class="overlay hidden">
+      <div class="overlay-box pause-box">
+        <div id="pause-menu-view" class="pause-view">
+          <p class="pause-title">PAUSA</p>
+          <button class="menu-btn" id="resume-btn">Reanudar</button>
+          <button class="menu-btn" id="pause-restart-btn">Reiniciar</button>
+          <button class="menu-btn" id="view-controls-btn">Ver controles</button>
+          <div class="level-select-row">
+            <label for="start-level-select">Nivel inicial</label>
+            <select id="start-level-select"></select>
+          </div>
+        </div>
+
+        <div id="pause-controls-view" class="pause-view hidden">
+          <p class="pause-title">CONTROLES</p>
+          <ul class="pause-controls-list">
+            <li><kbd>←</kbd><kbd>→</kbd> mover</li>
+            <li><kbd>↑</kbd> / <kbd>X</kbd> rotar</li>
+            <li><kbd>↓</kbd> bajar</li>
+            <li><kbd>Space</kbd> caída</li>
+            <li><kbd>P</kbd> / <kbd>Esc</kbd> pausa</li>
+          </ul>
+          <button class="menu-btn" id="back-controls-btn">Volver</button>
+        </div>
       </div>
     </div>
   </div>

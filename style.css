@@ -135,6 +135,28 @@ body {
   font-size: 10px;
 }
 
+/* ---- Skin picker ---- */
+.skin-picker {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skin-picker .label {
+  font-size: 10px;
+}
+
+.skin-picker select {
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  color: var(--kbd-text);
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .game-container {
   display: flex;
   gap: 20px;
@@ -265,4 +287,206 @@ kbd {
 
 #restart-btn:hover {
   background: var(--restart-hover);
+}
+
+/* ---- High scores ---- */
+.highscores-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+}
+
+.highscores-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.highscores-list li.empty {
+  color: var(--controls-text);
+  font-style: italic;
+}
+
+.highscores-list li.current {
+  background: var(--value-color);
+  color: var(--restart-text);
+  font-weight: 700;
+}
+
+.highscores-list .pos {
+  width: 16px;
+  color: var(--label-color);
+}
+
+.highscores-list li.current .pos {
+  color: inherit;
+}
+
+.highscores-list .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.best-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 11px;
+  color: var(--controls-text);
+  margin-top: 4px;
+}
+
+.reset-btn {
+  margin-top: 6px;
+  background: transparent;
+  color: var(--controls-text);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.reset-btn:hover {
+  background: var(--kbd-bg);
+  color: var(--text);
+}
+
+/* ---- New high score form (overlay) ---- */
+.new-highscore-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.new-highscore-form.hidden {
+  display: none;
+}
+
+.new-record-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--overlay-title-color);
+  letter-spacing: 1px;
+}
+
+#player-name-input {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  text-align: center;
+  width: 140px;
+}
+
+#save-score-btn {
+  background: var(--restart-bg);
+  color: var(--restart-text);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+#save-score-btn:hover {
+  background: var(--restart-hover);
+}
+
+#overlay-highscores-list {
+  width: 180px;
+  margin: 6px 0;
+}
+
+/* ---- Pause menu ---- */
+.pause-box {
+  width: 220px;
+}
+
+.pause-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.pause-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: var(--overlay-score-color);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.menu-btn {
+  background: var(--kbd-bg);
+  color: var(--text);
+  border: 1px solid var(--kbd-border);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s;
+}
+
+.menu-btn:hover {
+  background: var(--restart-bg);
+  color: var(--restart-text);
+}
+
+.level-select-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--label-color);
+  letter-spacing: 1px;
+}
+
+.level-select-row select {
+  background: var(--kbd-bg);
+  color: var(--kbd-text);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.pause-controls-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pause-controls-list li {
+  font-size: 13px;
+  color: var(--controls-text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
